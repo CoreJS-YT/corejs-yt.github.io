@@ -1,0 +1,236 @@
+/* Cosas Extras */
+:root{
+  /* Fonts */
+  --font-gols: 'Golos Text', sans-serif;
+  --font-ral: 'Raleway', sans-serif;
+  /* Colors Primaria */
+  --white: #d5d5d5;
+  --azul-baji: #557680;
+  /* Colors Neutro */
+  --azul-grisaceo: #1f2730;
+  --azul-grisaceo-claro: #2d3844;
+  --azul-grisaceo-oscuro: #141a1f;
+  --black: #0f0f0f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--black);
+  font-size: 19px;
+  font-family: var(--font-ral);
+}
+.body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Header */
+.body__encb {
+  background-color: var(--azul-grisaceo-oscuro);
+  color: var(--azul-baji);
+  padding: 10px 30px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.body__encb > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.body__encb__log-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.body__encb__name-title {
+  font-family: var(--font-gols);
+  font-weight: 500;
+  font-size: 0.96em;
+}
+.body__encb__navigation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.body__encb__navigation__link {
+  text-decoration: none;
+  color: var(--white);
+}
+.body__encb__navigation__link:hover {
+  color: var(--azul-baji);
+}
+
+/* Main */
+.body__info {
+  background-color: var(--azul-grisaceo-oscuro);
+  width: 500px;
+  height: 1980px;
+  overflow: hidden;
+  margin: 20px auto;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "art1" "art2" "art3" "art4";
+  padding: 10px 10px;
+  gap: 10px;
+  border-radius: 12px;
+}
+.art1 { grid-area: art1; border-radius: 12px; }
+.art2 { grid-area: art2; border-radius: 12px; }
+.art3 { grid-area: art3; border-radius: 12px; }
+.art4 { grid-area: art4; border-radius: 12px; }
+.body__info__article {
+  background-color: var(--azul-grisaceo-claro);
+  width: 480px;
+  height: 480px;
+  padding: 20px 20px;
+  transition: all .12s;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.body__info__article:hover {
+  background-color: var(--azul-grisaceo);
+  color: var(--azul-baji);
+}
+.body__info__article__pp, .body__info__article__word {
+  width: 200px;
+  height: 120px;
+}
+.body__info__article__lp, .body__info__article__page {
+  width: 200px;
+  height: 150px;
+}
+.img { grid-area: img; }
+.body__info__article__desctitle { grid-area: name; text-align: center; font-size: 2.4em; font-weight: 300; }
+.body__info__article__desc { grid-area: desc; text-align: center; font-size: 1.4em; font-weight: 600; font-family: var(--font-gols); }
+.body__info__article__price { grid-area: price; text-align: center; font-size: .98em; font-weight: 400; font-family: var(--font-gols); }
+.body__article__links { grid-area: link; text-align: center; font-size: .90em; font-weight: 100; font-family: var(--font-gols); text-decoration: none; color: var(--azul-baji); background-color: var(--azul-grisaceo-oscuro); padding: 10px 10px; border-radius: 12px; }
+.body__article__links:hover { background-color: var(--azul-baji); color: var(--white); cursor: pointer; }
+
+/* Jobs */
+.body__jobs {
+  background-color: var(--azul-grisaceo-oscuro);
+  width: 500px;
+  height: 1300px;
+  border-radius: 12px;
+  margin: 20px auto;
+  padding: 10px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "js-quiz" "ferra" "nft" "prod" "qr-code";
+  gap: 10px;
+}
+.body__jobs__job {
+  background-color: var(--azul-grisaceo-claro);
+  border-radius: 12px;
+  padding: 20px 20px;
+  transition: all .23s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.body__jobs__job:hover {
+  background-color: var(--azul-grisaceo);
+}
+.body__jobs__job__prev {
+  width: 200px;
+  height: 100px;
+  border-radius: 8px;
+}
+.body__jobs__job__desctitle {
+  color: var(--azul-baji);
+  font-family: var(--font-ral);
+  font-weight: 600;
+  font-size: 1.80em;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.body__jobs__job__link {
+  background-color: var(--azul-grisaceo-oscuro);
+  color: var(--azul-baji);
+  padding: 10px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+.body__jobs__job__link:hover {
+  background-color: var(--azul-baji);
+  color: var(--white);
+}
+.js-quiz { grid-area: js-quiz; }
+.ferra { grid-area: ferra; }
+.nft { grid-area: nft; }
+.prod { grid-area: prod; }
+.qr-code { grid-area: qr-code; }
+
+/* Footer */
+.body__desc {
+  background-color: var(--azul-grisaceo-oscuro);
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  color: var(--azul-grisaceo-claro);
+}
+.body__desc__hp {
+  color: var(--azul-baji);
+  font-family: var(--font-ral);
+  font-size: .93em;
+  font-weight: 400;
+}
+span {
+  color: var(--azul-grisaceo-claro);
+}
+
+/* Media Querys */
+@media (min-width: 1000px) {
+  .body__info {
+    width: 990px;
+    height: 990px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "art1 art2" "art3 art4";
+  }
+  .body__jobs {
+    width: 990px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "js-quiz js-quiz js-quiz ferra ferra ferra" "nft nft prod prod qr-code qr-code";
+  }
+}
+
+@media (min-width: 1200px) {
+  .body__info {
+    width: 1000px;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "art1 art2" "art3 art4";
+  }
+  .body__jobs {
+    width: 1000px;
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "js-quiz js-quiz js-quiz ferra ferra ferra" "nft nft prod prod qr-code qr-code";
+  }
+}
