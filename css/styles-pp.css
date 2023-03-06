@@ -1,0 +1,113 @@
+/* Cosas Extras */
+:root{
+  /* Fonts */
+  --font-gols: 'Golos Text', sans-serif;
+  --font-ral: 'Raleway', sans-serif;
+  /* Colors Primaria */
+  --white: #d5d5d5;
+  --azul-baji: #557680;
+  /* Colors Neutro */
+  --azul-grisaceo: #1f2730;
+  --azul-grisaceo-claro: #2d3844;
+  --azul-grisaceo-oscuro: #141a1f;
+  --black: #0f0f0f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--black);
+  font-size: 19px;
+  font-family: var(--font-ral);
+}
+
+/* Header */
+.encb {
+  background-color: var(--azul-grisaceo-oscuro);
+  color: var(--azul-baji);
+  padding: 10px 30px;
+  width: 10000;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+.encb > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.encb__log-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.encb__name-title {
+  font-family: var(--font-gols);
+  font-weight: 500;
+  font-size: 0.96em;
+}
+.encb__navigation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.encb__navigation__link {
+  text-decoration: none;
+  color: var(--white);
+}
+.encb__navigation__link:hover {
+  color: var(--azul-baji);
+}
+
+/* Main */
+.content {
+  width: 300px;
+  height: 600px;
+  overflow: hidden;
+  background-color: var(--azul-grisaceo-oscuro);
+  border-radius: 12px;
+  margin: 20px auto;
+}
+.content__articles {
+  width: 300px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "cobre" "platino";
+  gap: 10px;
+  padding: 10px 10px;
+}
+.content__articles__article {
+  width: 280px;
+  height: 280px;
+  background-color: var(--azul-grisaceo);
+  border-radius: 12px;
+  padding: 10px 10px;
+}
+.content__articles__article__img { width: 150px; height: 75px; }
+.article2 { grid-area: cobre; }
+.article1 { grid-area: platino; }
+
+/* Footer */
+.desc {
+  background-color: var(--azul-grisaceo-oscuro);
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  color: var(--azul-grisaceo-claro);
+}
+.desc__hp {
+  color: var(--azul-baji);
+  font-family: var(--font-ral);
+  font-size: .93em;
+  font-weight: 400;
+}
+.desc__hp > span {
+  color: var(--azul-grisaceo-claro);
+}

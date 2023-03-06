@@ -1,0 +1,196 @@
+/* Cosas Extras */
+:root{
+  /* Fonts */
+  --font-gols: 'Golos Text', sans-serif;
+  --font-ral: 'Raleway', sans-serif;
+  /* Colors Primaria */
+  --white: #d5d5d5;
+  --azul-baji: #557680;
+  /* Colors Neutro */
+  --azul-grisaceo: #1f2730;
+  --azul-grisaceo-claro: #2d3844;
+  --azul-grisaceo-oscuro: #141a1f;
+  --black: #0f0f0f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--black);
+  font-size: 19px;
+  font-family: var(--font-ral);
+}
+
+/* Header */
+.encb {
+  background-color: var(--azul-grisaceo-oscuro);
+  color: var(--azul-baji);
+  padding: 10px 30px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+.encb > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.encb__log-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+.encb__name-title {
+  font-family: var(--font-gols);
+  font-weight: 500;
+  font-size: 0.96em;
+}
+.encb__navigation {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.encb__navigation__link {
+  text-decoration: none;
+  color: var(--white);
+}
+.encb__navigation__link:hover {
+  color: var(--azul-baji);
+}
+
+/* Main */
+.content {
+  width: 300px;
+  height: 950px;
+  background-color: var(--azul-grisaceo-oscuro);
+  padding: 10px 10px;
+  margin: 50px auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.content__articles {
+  width: 300px;
+  height: 950px;
+  padding: 10px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "pp" "word" "excel" "descn";
+  gap: 10px;
+}
+.content__articles__article {
+  background-color: var(--azul-grisaceo-claro);
+  border-radius: 12px;
+  width: 260px;
+  height: 280px;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+.content__articles__article:hover {
+  background-color: var(--azul-grisaceo);
+}
+.content__articles__article__desctitle {
+  color: var(--white);
+  font-family: var(--font-ral);
+  font-size: 1.93em;
+  font-weight: 400;
+  transition: all .3s;
+}
+.content__articles__article__desctitle > span {
+  color: var(--azul-grisaceo-oscuro);
+
+}
+.content__articles__article:hover > .desctitle {
+  color: var(--white);
+}
+.content__articles__article__desc {
+  color: var(--azul-baji);
+  font-family: var(--font-gols);
+  font-size: .98em;
+  font-weight: 400;
+  transition: all .3s;
+}
+.content__articles__article:hover > .descs {
+  color: var(--white);
+}
+.content__articles__article__price {
+  color: var(--azul-baji);
+  font-family: var(--font-gols);
+  transition: all .3s;
+}
+.content__articles__article:hover > .price {
+  color: var(--white);
+}
+.pp { width: 120px; height: 70px; grid-area: pp; }
+.word { width: 100px; height: 70px; grid-area: word; }
+.excel { width: 90px; height: 70px; grid-area: excel; }
+
+
+/* Footer */
+.desc {
+  background-color: var(--azul-grisaceo-oscuro);
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  color: var(--azul-grisaceo-claro);
+}
+.desc__hp {
+  color: var(--azul-baji);
+  font-family: var(--font-ral);
+  font-size: .93em;
+  font-weight: 400;
+}
+.desc__hp > span {
+  color: var(--azul-grisaceo-claro);
+}
+
+/* Medias Querys */
+@media (min-width: 600px) {
+  .content {
+    width: 570px;
+    height: 570px;
+  }
+  .content__articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "pp word" "excel excel";
+    width: 570px;
+    height: 570px;
+  }
+  .content__articles__article {
+    width: 250px;
+    height: 250px;
+    gap: 5px;
+  }
+}
+@media (min-width: 1000px) {
+  .content {
+    width: 700px;
+    height: 700px;
+  }
+  .content__articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "pp word" "excel excel";
+    width: 700px;
+    height: 700px;
+  }
+  .content__articles__article {
+    width: 310px;
+    height: 310px;
+    gap: 5px;
+  }
+}
