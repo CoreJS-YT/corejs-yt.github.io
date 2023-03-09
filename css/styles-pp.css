@@ -69,9 +69,12 @@ body {
   width: 300px;
   height: 600px;
   overflow: hidden;
-  background-color: var(--azul-grisaceo-oscuro);
+  background-color: var(--azul-grisaceo);
   border-radius: 12px;
   margin: 20px auto;
+}
+.content:hover {
+  background-color: var(--azul-grisaceo-oscuro);
 }
 .content__articles {
   width: 300px;
@@ -82,15 +85,36 @@ body {
   grid-template-areas: "cobre" "platino";
   gap: 10px;
   padding: 10px 10px;
+  transition: all .3s;
 }
 .content__articles__article {
   width: 280px;
   height: 280px;
-  background-color: var(--azul-grisaceo);
+  background-color: var(--azul-grisaceo-oscuro);
   border-radius: 12px;
-  padding: 10px 10px;
+  padding: 20px 20px;
+  transition: all .3s;
+  text-align: center;
+}
+.content__articles__article:hover {
+  background-color: var(--azul-grisaceo-claro);
 }
 .content__articles__article__img { width: 150px; height: 75px; }
+.content__articles__article__desctitle {
+  color: var(--azul-baji);
+  font-size: 1.5em;
+  font-weight: 700;
+}
+.content__articles__article__desc {
+  color: var(--azul-baji);
+  font-size: 1.3em;
+  font-weight: 500;
+}
+.content__articles__article__price {
+  color: var(--azul-baji);
+  font-size: .93em;
+  font-weight: 700;
+}
 .article2 { grid-area: cobre; }
 .article1 { grid-area: platino; }
 
